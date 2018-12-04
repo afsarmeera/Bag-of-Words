@@ -60,7 +60,7 @@ aCorpus <- tm_map(aCorpus, stemDocument)
 
  
 
-BigramTokenizer <- function(x) NGramTokenizer(x, Weka_control(min=7, max=7))
+BigramTokenizer <- function(x) NGramTokenizer(x, Weka_control(min=2, max=7))
 
  
 
