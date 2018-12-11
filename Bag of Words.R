@@ -66,7 +66,7 @@ BigramTokenizer <- function(x) NGramTokenizer(x, Weka_control(min=2, max=7))
 
 aTDM <- DocumentTermMatrix(aCorpus, control=list(tokenize=BigramTokenizer))
 
-#aTDM<- DocumentTermMatrix(tm,control = list(weighting = function(x) weightTfIdf(x, normalize = FALSE),stopwords = TRUE))
+aTDM<- DocumentTermMatrix(tm,control = list(weighting = function(x) weightTfIdf(x, normalize = FALSE),stopwords = TRUE))
 
 aTDM = removeSparseTerms(aTDM,0.99)
 
